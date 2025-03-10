@@ -8,6 +8,8 @@ export async function POST(request: Request) {
   try {
     const { email, username, password } = await request.json();
 
+    console.log("reqbody: ",email, username, password);
+
     const existingUserVerifyByUsername = await UserModel.findOne({
       username,
       isVarified: true,
