@@ -21,8 +21,8 @@ export interface User extends Document{
     username: string,
     email:string,
     password:string,
-    varifyCode:string,
-    varifyCodeExpire:Date,
+    verifyCode:string,
+    verifyCodeExpire:Date,
     isVarified:boolean,
     isAcceptingMessages:boolean,
     messages:Message[]
@@ -45,11 +45,11 @@ const UserSchema :Schema<User> = new Schema({
         type:String,
         required:[true,"Password is required"],
     },
-    varifyCode:{
+    verifyCode:{
         type:String,
         required:[true,"Varify code is required"]
     },
-    varifyCodeExpire:{
+    verifyCodeExpire:{
         type:Date,
         required:[true,"Varify code expire is required"]
     },

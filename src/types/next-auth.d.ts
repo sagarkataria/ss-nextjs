@@ -15,7 +15,7 @@ declare module "next-auth" {
         isVarified?: boolean;
         isAcceptingMessages?: string;
         username?: string;
-      } & DefaultSession["user"];
+      } & DefaultSession['user'];
     }
 }
 
